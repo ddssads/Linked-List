@@ -4,14 +4,13 @@
 #include <iostream>
 #include "Linkedlist.h"
 #include "Circular.h"
+#include "Doubly.h"
 
 int main()
 {
 	int A[] = { 1,2,3,4 };
 	int B[] = { 5,6,7,8 };
-	CircularLinkedList C1(A, 4);
-	LinkedList l1(A, 4);
-	C1.Delete(2);
-	C1.Display();
-	C1.~CircularLinkedList();
+	Doubly d1(A, 4);
+	d1.Delete(1);
+	d1.Display();
 }

@@ -140,11 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Circular.cpp" />
+    <ClCompile Include="Doubly.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Linkedlist.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circular.h" />
+    <ClInclude Include="Doubly.h" />
     <ClInclude Include="Linkedlist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -24,12 +24,18 @@
     <ClCompile Include="Circular.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Doubly.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Linkedlist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Circular.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Doubly.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

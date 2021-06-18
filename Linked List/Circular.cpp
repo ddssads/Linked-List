@@ -60,3 +60,49 @@ CircularLinkedList:: ~CircularLinkedList()
 		head = nullptr;
 	}
 }
+
+void CircularLinkedList::Insert(int position, int x)
+{
+	CNode* t,*p;
+	p = head;
+	if (position < 0 || position > Length())
+		return;
+	//before head
+	if (position == 0)
+	{
+		t = new CNode;
+		t->data = x;
+		if (head == NULL)
+		{
+			head = t;
+			head->next = head;
+		}
+		else
+		{
+			while (p->next != head) p = p->next;
+			p -> next = t;
+			t -> next = head;
+			head = t;//optional
+		}
+	}
+	else
+	{
+		for (int i = 0; i < position - 1; i++) p = p->next;
+		t = new CNode;
+		t->data = x;
+		t->next = p->next;
+		p->next = t;
+	}
+}
+
+int CircularLinkedList::Length()
+{
+	int len = 0;
+	CNode* p = head;
+	do
+	{
+		len++;
+		p = p->next;
+	} while (p != head);
+	return len;
+}

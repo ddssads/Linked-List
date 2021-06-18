@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Circular.cpp" />
-    <ClCompile Include="Linked List.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Linkedlist.cpp" />
   </ItemGroup>
   <ItemGroup>

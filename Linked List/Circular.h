@@ -19,4 +19,6 @@ public:
 	void RDisplay(CNode* p);
 	CNode* getHead() { return head; }
 	~CircularLinkedList();
+	void Insert(int position, int x);
+	int Length();
 };

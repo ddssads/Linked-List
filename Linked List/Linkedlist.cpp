@@ -1,7 +1,7 @@
 #include "Linkedlist.h"
 LinkedList::LinkedList(int A[], int n)
 {
-    Node* t;
+    Node* t ;
     first = new Node;
     first->data = A[0];
     first -> next = nullptr;
@@ -26,7 +26,6 @@ LinkedList ::~LinkedList()
         p = first;
     }
 }
-
 
 void LinkedList::Display()
 {
@@ -180,7 +179,7 @@ void LinkedList::Insert(int position, int x)
     }
 }
 
-void LinkedList::InsertLast(int x)
+/*void LinkedList::InsertLast(int x)
 {
     Node* t = new Node;
     t->data = x;
@@ -194,7 +193,7 @@ void LinkedList::InsertLast(int x)
         last->next = t;
         last = t;
     }
-}
+}*/
 
 void LinkedList::SortedInsert(int x)
 {
@@ -367,7 +366,7 @@ int LinkedList:: isLoop()
     {
         p = p->next;
         q = q->next;
-        q = q ? q->next : q;//q != null return q->next else false
+        q = q ? q->next : q;
     } while (p && q && p != q);
     if (p == q)
         return 1;
@@ -376,9 +375,11 @@ int LinkedList:: isLoop()
 
 void LinkedList::Merge(Node* second)
 {
+    Node* last;
     if (first->data < second->data)
     {
-        third = last = first;
+        third =  first;
+        last = first;
         first = first->next;
         last->next = nullptr;
     }
@@ -386,7 +387,7 @@ void LinkedList::Merge(Node* second)
     {
         third = last = second;
         second = second->next;
-        last->next = nullptr;
+        last->next = NULL;
     }
     while (first != NULL && second != NULL)
     {
@@ -395,14 +396,14 @@ void LinkedList::Merge(Node* second)
             last->next = first;
             last = first;
             first = first->next;
-            last->next = nullptr;
+            last->next = NULL;
         }
         else
         {
             last->next = second;
             last = second;
             second = second->next;
-            last->next = nullptr;
+            last->next = NULL;
         }
     }
     if (first != NULL)

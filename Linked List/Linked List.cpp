@@ -13,5 +13,5 @@ int main()
 	LinkedList l2(B,4);
 	l1.ReverseL();
 	l1.Merge(l2.getFirstNode());
-	l1.Display();
+	l1.RDisplay();
 }

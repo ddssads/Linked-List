@@ -132,6 +132,9 @@ int CircularLinkedList::Delete(int position)
 	else
 	{
 		p = head;
+		/*position - 2 will delete q it's movinig p to previous of target then let q pointing on p->next
+		In Linear Linked List use pos -1 it will delte p and every loop q move to p and p move forward
+		then p will point on the target */
 		for (int i = 0; i < position - 2; i++)
 		{
 			p = p->next;

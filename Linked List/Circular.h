@@ -1,10 +1,10 @@
 #pragma once
 class CircularLinkedList;
-class Node
+class CNode
 {
 private:
 	int data;
-	Node* next;
+	CNode* next;
 public:
 	friend class CircularLinkedList;
 };
@@ -12,11 +12,11 @@ public:
 class CircularLinkedList
 {
 private:
-	Node* head;
+	CNode* head;
 public:
 	CircularLinkedList(int* A, int n);
 	void Display();
-	void recursiveDisplay(Node* p);
-	Node* getHead() { return head; }
+	void RDisplay(CNode* p);
+	CNode* getHead() { return head; }
 	~CircularLinkedList();
 };

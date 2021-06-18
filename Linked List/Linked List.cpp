@@ -3,15 +3,13 @@
 
 #include <iostream>
 #include "Linkedlist.h"
-
+#include "Circular.h"
 
 int main()
 {
 	int A[] = { 1,2,3,4 };
 	int B[] = { 5,6,7,8 };
-	LinkedList l1(A,4);
-	LinkedList l2(B,4);
-	l1.ReverseL();
-	l1.Merge(l2.getFirstNode());
-	l1.RDisplay();
+	CircularLinkedList C1(A, 4);
+	C1.RDisplay(C1.getHead());
+	C1.~CircularLinkedList();
 }

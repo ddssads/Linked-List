@@ -1,4 +1,6 @@
 #include "Linkedlist.h"
+#include <iostream>
+using namespace std;
 LinkedList::LinkedList(int A[], int n)
 {
     Node* t ;

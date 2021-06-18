@@ -21,4 +21,5 @@ public:
 	~CircularLinkedList();
 	void Insert(int position, int x);
 	int Length();
+	int Delete(int position);
 };

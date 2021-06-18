@@ -106,3 +106,40 @@ int CircularLinkedList::Length()
 	} while (p != head);
 	return len;
 }
+
+int CircularLinkedList::Delete(int position)
+{
+	CNode* p, * q;
+	int x;
+	if (position == 1)
+	{
+		p = head;
+		while (p->next != head)
+			p = p->next;
+		x = head->data;
+		if (p == head)
+		{
+			delete head;
+			head = nullptr;
+		}
+		else
+		{
+			p->next = head->next;
+			delete head;
+			head = p->next;
+		}
+	}
+	else
+	{
+		p = head;
+		for (int i = 0; i < position - 2; i++)
+		{
+			p = p->next;
+		}
+		q = p->next;
+		p->next = q->next;
+		x = q->data;
+		delete q;
+	}
+	return x;
+}

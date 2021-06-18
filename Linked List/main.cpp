@@ -10,7 +10,8 @@ int main()
 	int A[] = { 1,2,3,4 };
 	int B[] = { 5,6,7,8 };
 	CircularLinkedList C1(A, 4);
-	C1.Insert(5, 10);
+	LinkedList l1(A, 4);
+	C1.Delete(2);
 	C1.Display();
 	C1.~CircularLinkedList();
 }

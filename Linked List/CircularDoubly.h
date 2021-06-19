@@ -18,7 +18,7 @@ public:
 	CircularDoubly(int A[], int n);
 	void Display();
 	int Length();
+	int Delete(int position);
 	void Insert(int position, int x);
-	int Delete(int position, int x);
 };
 

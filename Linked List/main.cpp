@@ -11,9 +11,7 @@ int main()
 {
 	int A[] = { 1,2,3,4 };
 	int B[] = { 5,6,7,8 };
-	CircularDoubly c1;
-	c1.Insert(0, 6);
-	c1.Insert(1, 7);
-	c1.Insert(2, 9);
+	CircularDoubly c1(A,4);
+	c1.Delete(3);
 	c1.Display();
 }

@@ -51,6 +51,7 @@ public:
     void RReverse(Node* q,Node *p);
     void Concatenate(Node* second);
     void Merge(Node *second);
+    int Mid();
     int isLoop();
 };
 

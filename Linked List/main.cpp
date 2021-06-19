@@ -9,9 +9,8 @@
 
 int main()
 {
-	int A[] = { 1,2,3,4 };
+	int A[] = { 1,2,3,4,6,7 };
 	int B[] = { 5,6,7,8 };
-	CircularDoubly c1(A,4);
-	c1.Delete(3);
-	c1.Display();
+	LinkedList c1(A,6);
+	cout<<c1.Mid();
 }

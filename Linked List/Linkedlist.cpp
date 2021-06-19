@@ -426,3 +426,16 @@ Node* LinkedList::getFirstNode()
 {
     return first;
 }
+
+int LinkedList::Mid()
+{
+    Node* p, *q;
+    p = q = first;
+    while (q)
+    {
+        q = q->next;
+        if (q) q = q->next;
+        if (q) p = p->next;
+    }
+    return  p->data;
+}

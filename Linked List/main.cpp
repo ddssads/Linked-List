@@ -11,6 +11,6 @@ int main()
 	int A[] = { 1,2,3,4 };
 	int B[] = { 5,6,7,8 };
 	Doubly d1(A, 4);
-	d1.Delete(1);
+	d1.Reverse();
 	d1.Display();
 }

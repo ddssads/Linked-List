@@ -99,3 +99,19 @@ int Doubly::Delete(int position)
 	}
 	return x;
 }
+
+void Doubly::Reverse()
+{
+	DNode* p = first;
+	DNode* temp = nullptr;
+	while (p)
+	{
+		temp = p->next;
+		p->next = p->prev;
+		p->prev = temp;
+		p = temp;
+		//p != null 沒這個條件的話 while會讓p=null p->next==null就會出問題 因為p不存在
+		if (p!=nullptr &&p->next == nullptr)
+			first = p;
+	}
+}

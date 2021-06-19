@@ -20,6 +20,7 @@ public:
 	int Length();
 	void Insert(int position, int x);
 	int Delete(int position);
+	void Reverse();
 };
 
 

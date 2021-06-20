@@ -12,5 +12,7 @@ int main()
 	int A[] = { 1,2,3,4,6,7 };
 	int B[] = { 5,6,7,8 };
 	LinkedList c1(A,6);
-	cout<<c1.Mid();
+	LinkedList c2(B, 4);
+	c1.Concatenate(c2.getFirstNode());
+	c1.Display();
 }

@@ -30,6 +30,7 @@ public:
     void RDisplay();//Recursive
     void RDisplay(Node* p);
     Node* getFirstNode();
+    Node* ReleaseFirst();
     int Count();
     int RCount(Node* p);//Recursive
     int Sum();

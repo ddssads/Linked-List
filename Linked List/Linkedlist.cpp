@@ -181,7 +181,7 @@ void LinkedList::Insert(int position, int x)
     }
 }
 
-/*void LinkedList::InsertLast(int x)
+void LinkedList::InsertLast(int x)
 {
     Node* t = new Node;
     t->data = x;
@@ -195,7 +195,7 @@ void LinkedList::Insert(int position, int x)
         last->next = t;
         last = t;
     }
-}*/
+}
 
 void LinkedList::SortedInsert(int x)
 {
@@ -348,6 +348,7 @@ void LinkedList::RReverse(Node* q,Node* p)
 void LinkedList::Concatenate(Node* second)
 {
     Node* p = first;
+    Node* s = second;
     while (p->next != NULL)
     {
         p = p->next;
@@ -438,4 +439,10 @@ int LinkedList::Mid()
         if (q) p = p->next;
     }
     return  p->data;
+}
+
+Node* LinkedList::ReleaseFirst() {
+    Node* tmp = first;
+    first = nullptr;
+    return tmp;
 }
